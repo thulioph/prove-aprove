@@ -1,48 +1,47 @@
-# DDDMG 2015
-Source of the main website for [DDDMG](http://dddmg.org) simposium.
+# ProveAprove
 
-## Setup
+## Instalação
 
-1. If you don't have installed [npm](http://npmjs.org), [bower](http://bower.io) and [grunt](http://gruntjs.com/) do it now.
+1. Se você não tem instalado [npm](http://npmjs.org), [bower](http://bower.io) e [grunt](http://gruntjs.com/), faça isso agora.
 
-2. After install run the `npm install` command to install all the dependencies.
+2. Depois da instalação execute o comando `npm install` para instalar todas as dependências.
 
     ```
     $ npm install
     ```
 
-3. Run `grunt` command to initialize.
+3. Execute o comando `grunt` para inicializar.
 
     ```
     $ grunt
     ```
 
-## Pay Attention
+## Preste Atenção!
 
-1. We use **bower** to manage all the dependencies.
+1. Nós usamos o **bower** para gerenciamento de dependências.
 
     ```
-      $ bower search name-package
-      $ bower install name-package --save-dev
+      $ bower search nome-do-pacote
+      $ bower install nome-do-pacote --save-dev
     ```
 
-2. We use **grunt** to make hard work.
+2. Nós usamos **grunt** para o trabalho duro.
 
-3. We work with two paths for images:
+3. Nós trabalhamos com dois caminhos para imagens:
 
-* `src` to images in development.
-* `dist` to images in production.
+* `src` para imagens em desenvolvimento.
+* `dist` para imagens em produção.
 
-> run `grunt img` command to minify and optmize images.
+> execute o comando `grunt img` para minificar e otimizar as imagens.
 
-4. We use [browserSync](http://www.browsersync.io/) to test in differents browsers and devices.
+4. Nós usamos [browserSync](http://www.browsersync.io/) para testar em diferentes browsers e devices.
 
-> remove this script when production server.
+> remove este script quando estiver em produção.
 
     <script type='text/javascript'>//<![CDATA[
     ;document.write("<script defer src='//HOST:3000/socket.io/socket.io.js'><\/script><script defer src='//HOST:3001/client/browser-sync-client.0.9.1.js'><\/script>".replace(/HOST/g, location.hostname));
     //]]></script>
 
-4. For best control of scripts, add libs and your scripts to compile and concatenate in `grunt-config.json` file, the task **uglify**.
+4. Para um melhor controle do carregamento dos seus scripts, compilar e concatenar, no arquivo `grunt-config.json` adiciona os scripts na task do **uglify**.
 
-## Have a nice job :)
+## Tenha um ótimo trabalho!
