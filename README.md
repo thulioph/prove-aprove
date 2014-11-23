@@ -1,5 +1,12 @@
 # ProveAprove
 
+## Equipe
+
+Leonardo Paiva | Thulio Philipe
+:------------:  |  :-------------:
+<a href="https://github.com/leonardopaiva">![Leonardo Paiva](https://avatars.githubusercontent.com/u/6975831?v=3&s=128)</a> | <a href="https://github.com/thulioph">![Thulio Philipe](https://avatars2.githubusercontent.com/u/2343288?v=3&s=128)</a>
+Front-End | Front-End
+
 ## Instalação
 
 1. Se você não tem instalado [npm](http://npmjs.org), [bower](http://bower.io) e [grunt](http://gruntjs.com/), faça isso agora.
