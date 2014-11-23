@@ -1,0 +1,29 @@
+{
+  "name": "proveaprove",
+  "version": "1.0.0",
+  "description": "App desenvolvido com a finalidade de facilitar o consumo e publicação de receitas de culinária.",
+  "main": "dist/js/scripts.combined.min.js",
+  "keywords": [
+    "app",
+    "webapp",
+    "proveAprove",
+    "receitas",
+    "culinaria"
+  ],
+  "authors": [
+    "Leonardo Paiva <contato@leonardopaiva.com>",
+    "Thulio Philipe <thulioph@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "http://github.com/thulioph/prove-aprove",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "~2.1.1"
+  }
+}
