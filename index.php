@@ -41,6 +41,7 @@
 	<!-- JS -->
   <script src="dist/js/scripts.min.js"></script>
   <script src="dist/js/libs.min.js"></script>
+  <script src="src/js/app/app.js"></script>
 
 	<!-- BrowserSync -->
   <script type='text/javascript'>//<![CDATA[
