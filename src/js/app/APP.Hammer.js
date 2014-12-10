@@ -27,7 +27,7 @@ APP.Hammer = {
 		  //ponteiro.style.left = pointer0.clientX+"px";
 		  //ponteiro.style.top = pointer0.clientY+"px";
 		  
-		  if(event.type.match(/panmove/g)) {
+		  if(event.type.match(/panstart/g)) {
 		    that.panStartEventHandler.apply(that, arguments);
 		  }
 
@@ -39,10 +39,12 @@ APP.Hammer = {
 		    that.swipeLeftEventHandler.apply(that, arguments);
 		  }
 
+		  //panleft
 		  if(event.type.match(/panleft/g)){
 		    that.panLeftEventHandler.apply(that, arguments);
 		  }
 
+		  //panright
 	   	if(event.type.match(/panright/g)){
 		    that.panRightEventHandler.apply(that, arguments);
 		  }
@@ -50,8 +52,6 @@ APP.Hammer = {
 		  if(event.type.match(/end/g)) {
 		    that.panEndEventHandler.apply(that, arguments);
 		  }
-		    
-		  
 		})
 	},
 
@@ -61,11 +61,11 @@ APP.Hammer = {
 	},
 
 	swipeRightEventHandler: function(){
-		APP.Navigation.showMenu();
+		//APP.Navigation.showMenu();
 	},
 
 	swipeLeftEventHandler: function(){
-		APP.Navigation.hideMenu();
+		//APP.Navigation.hideMenu();
 	},
 
 	panStartEventHandler: function(event){
@@ -73,30 +73,40 @@ APP.Hammer = {
 	},
 
 	panLeftEventHandler: function(event){
-		APP.Navigation.moveLeftElement(event);
+		APP.Navigation.moveElement(event);
 	},
 
 	panRightEventHandler: function(event){
-		//console.dir(event);
+		APP.Navigation.moveElement(event);
 	},
 
+	//panEn
 	panEndEventHandler: function(event){
-		
+		APP.Navigation.calculatePanEndPosition(event);
+		this.cleanPanVariables();
 	},
 
 	setPanStartVariables: function(event){	
-		if(event.target.id == "maisum"){
-			var offset = $(event.target).offset();
-			var offsetLeft = parseInt(offset.left);
-			var pointer0 = event.pointers[0];
+		var target = event.target;
 
-			this._objVariables = {
-				targetLeft: offsetLeft,
-				clientXStart: pointer0.clientX
-			}
-
-			console.dir('obj: '+ this._objVariables);
+		if(!event.target.classList.contains('panLeftToClose')){
+			target = $(event.target).closest('.full-page').get(0);
 		}
-	
+
+		var	offset = $(target).offset();
+		var offsetLeft = parseInt(offset.left);
+		var pointer0 = event.pointers[0];
+
+		this._objVariables = {
+			targetLeft: offsetLeft,
+			clientXStart: pointer0.clientX
+		}
+	},
+
+	cleanPanVariables: function(){
+		this._objVariables = {
+			targetLeft: null,
+			clientXStart: null
+		}
 	}
 };

@@ -46,14 +46,15 @@
     </section>
 
     <section id="wrap-home" class="full-page active">
-      <h1>2 Home</h1>
-      <p>lorem ipsum lorem lorem ipsum lorem lorem ipsum lorem lorem ipsum lorem lorem ipsum lorem lorem ipsum lorem lorem ipsum lorem   </p>
-
+      <div class="wrap-content">
+        <h1>2 Home</h1>
+        <p>lorem ipsum lorem lorem ipsum lorem lorem ipsum lorem lorem ipsum lorem lorem ipsum lorem lorem ipsum lorem lorem ipsum lorem   </p>
+      </div>
       <div id="maisum" class="panLeftToClose" style="">
         TESTANDO PULL LEFT
       </div>
       <div id="container">
-        <div id="pad">Toque &<br>arraste</div>
+        <div id="pad">Toque &<br>arrastes</div>
       </div>
       <div id="ponteiro"></div>
     </section>

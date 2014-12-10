@@ -13,6 +13,12 @@ body{
 	overflow-x:hidden;
 }
 /* ===============================================================
+CLASS
+================================================================== */
+.transition-normal{
+	transition:0.7s;-moz-transition:0.7s;-webkit-transition:0.7s;-o-transition:0.7s;-ms-transition:0.7s;
+}
+/* ===============================================================
 STRUCTURE
 ================================================================== */
 #main{
@@ -32,7 +38,6 @@ STRUCTURE
 	right:0;
 	bottom:0;
 	background:#efefef;
-	transition:2s;-moz-transition:2s;-webkit-transition:2s;-o-transition:2s;-ms-transition:2s;
 }
 .full-page.active{
 	left:0;
@@ -42,7 +47,7 @@ STRUCTURE
 }
 
 .panLeftToClose{
-	width:100px;
+	width:300px;
 	position:relative;
 	height:100px;
 	left:10px;
@@ -55,22 +60,13 @@ CONTENT
 #wrap-home{
 	
 }
-
-
-#ponteiro {
-  z-index: 99;
-  bottom: 20px;
-  left: 50%;
-  width: 80px;
-  height: 80px;
-  background-color: #000;
-  position: fixed;
-  margin-left: -40px;
-  margin-top: -40px;
-  border-radius: 50%;
+.wrap-content{
+	width:300px;
 }
 
-
+/* ===============================================================
+MEDIA QUERIE
+================================================================== */
 @media screen and (-ms-high-contrast: none) {
     // Windows 8+ IE only
     html {
