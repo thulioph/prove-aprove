@@ -50,7 +50,8 @@ APP.Navigation = {
 		var modifier = null, 
 				pointer0 = null, 
 				target = event.target,
-				boolOffCanvasLeft = false;
+				boolOffCanvasLeft = false,
+				maxPoint = false;
 
 		if(!event.target.classList.contains('panLeftToClose')){
 			target = $(event.target).closest('.full-page').get(0);
@@ -63,7 +64,13 @@ APP.Navigation = {
 		modifier = parseInt(APP.Hammer._objVariables.clientXStart) - parseInt(pointer0.clientX);
 		modifier = parseInt(APP.Hammer._objVariables.targetLeft) - modifier;
 
-		if(!APP.Functions.empty(modifier) && !APP.Functions.empty(target) && !boolOffCanvasLeft){
+		if(event.type == 'panleft'){
+			maxPoint = ((window.innerWidth / 2 * -1) < APP.Hammer._objVariables.targetCurrentLeft + 5) ? false : true;
+		}else{
+			maxPoint = ((window.innerWidth / 2) > (APP.Hammer._objVariables.targetCurrentLeft - 5)) ? false : true;
+		}
+
+		if(!APP.Functions.empty(modifier) && !APP.Functions.empty(target) && !boolOffCanvasLeft && !maxPoint){
 			$(target).removeClass('transition-normal');
 			target.style.left = modifier+"px";
 		}
@@ -89,7 +96,7 @@ APP.Navigation = {
 
 			targetCalculated = APP.Hammer._objVariables.clientXStart - pointer0.clientX;
 			
-			if((targetCalculated > 100 || targetCalculated < -100) && (this._activePage != this._offCanvasLeft)){
+			if((targetCalculated > 50 || targetCalculated < -50) && (this._activePage != this._offCanvasLeft)){
 				if(boolPanLeftClose){
 					target.style.left = APP.Hammer._objVariables.targetLeft+"px";
 				}else if(boolOffCanvasLeft){
@@ -97,7 +104,14 @@ APP.Navigation = {
 					target.style.left = "0px";
 				}else{
 					this.showMenu();
-					target.style.left = "70%";
+					//var menuType = ((window.innerWidth / 2) > pointer0.clientX) ? true : false;
+					var menuType = (APP.Hammer._objVariables.panLeftModifier > APP.Hammer._objVariables.panRightModifier) ? true : false;
+					
+					if(menuType){
+						target.style.left = "-50%";
+					}else{
+						target.style.left = "50%";
+					}
 				}
 			}else{
 				if(!boolPanLeftClose){

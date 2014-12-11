@@ -30,40 +30,63 @@
 </head>
 
 <body>
+  <!-- =========================================================================
+    HEADER 
+    ============================================================================= -->
   <header class="header-primary">
 	</header>
-
+  <!-- =========================================================================
+    MAIN 
+    ============================================================================= -->
 	<main id="main" class="main">
-
+    <!-- =========================================================================
+    OFF-CANVAS 
+    ============================================================================= -->
+    <!-- off-canvas-left -->
     <section id="off-canvas-left" class="full-page">
-      <nav>
+      <nav class="main-nav template-nav">
         <ul>
+          <li>MENU</li>
           <li>Home</li>
           <li>About</li>
           <li>Contato</li>
         </ul>  
       </nav>
+      <nav class="user-config-nav template-nav">
+        <ul>
+          <li>MENU CONFIG USUÁRIO</li>
+          <li>Nome do Usuário</li>
+          <li>Perfil</li>
+          <li>deslogar</li>
+        </ul>  
+      </nav>
     </section>
-
-    <section id="wrap-home" class="full-page active">
+    <!-- =========================================================================
+    PAGES 
+    ============================================================================= -->
+    <!-- wrap-home -->
+    <section id="wrap-home" class="full-page ">
       <div class="wrap-content">
-        <h1>2 Home</h1>
+        <h1>HOME</h1>
         <p>lorem ipsum lorem lorem ipsum lorem lorem ipsum lorem lorem ipsum lorem lorem ipsum lorem lorem ipsum lorem lorem ipsum lorem   </p>
       </div>
+      <!--
       <div id="maisum" class="panLeftToClose" style="">
         TESTANDO PULL LEFT
       </div>
-      <div id="container">
-        <div id="pad">Toque &<br>arrastes</div>
-      </div>
-      <div id="ponteiro"></div>
+      -->
     </section>
-
-
-
-
+     <!-- wrap-contato -->
+    <section id="wrap-contact" class="full-page active">
+      <div class="wrap-content">
+        <h1>CONTATO</h1>
+        <p>lorem ipsum lorem lorem ipsum lorem lorem ipsum lorem lorem ipsum lorem lorem ipsum lorem lorem ipsum lorem lorem ipsum lorem   </p>
+      </div>
+    </section>
 	</main>
-
+  <!-- =========================================================================
+    FOOTER 
+    ============================================================================= -->
 	<footer class="footer-primary">
 	</footer>
 

@@ -73,10 +73,14 @@ APP.Hammer = {
 	},
 
 	panLeftEventHandler: function(event){
+		this.updatePanModifier(1,0);
+		this.updateElementPosition(event);
 		APP.Navigation.moveElement(event);
 	},
 
 	panRightEventHandler: function(event){
+		this.updatePanModifier(0,1);
+		this.updateElementPosition(event);
 		APP.Navigation.moveElement(event);
 	},
 
@@ -86,7 +90,7 @@ APP.Hammer = {
 		this.cleanPanVariables();
 	},
 
-	setPanStartVariables: function(event){	
+	setPanStartVariables: function(event){
 		var target = event.target;
 
 		if(!event.target.classList.contains('panLeftToClose')){
@@ -99,14 +103,42 @@ APP.Hammer = {
 
 		this._objVariables = {
 			targetLeft: offsetLeft,
-			clientXStart: pointer0.clientX
+			clientXStart: pointer0.clientX,
+			panLeftModifier: 0,
+			panRightModifier: 0,
+			targetCurrentLeft: offsetLeft
 		}
 	},
 
 	cleanPanVariables: function(){
 		this._objVariables = {
 			targetLeft: null,
-			clientXStart: null
+			clientXStart: null,
+			panLeftModifier: null,
+			panRightModifier: null,
+			targetCurrentLeft: null
 		}
+	},
+
+	updatePanModifier: function(panLeftModifier,panRightModifier){
+		var newPanLeftModifier = this._objVariables.panLeftModifier + panLeftModifier;
+		var newPanRightModifier = this._objVariables.panRightModifier + panRightModifier;
+		this._objVariables.panLeftModifier = newPanLeftModifier;
+		this._objVariables.panRightModifier = newPanRightModifier;
+	},
+
+	updateElementPosition: function(event){
+		var target = event.target;
+
+		if(!event.target.classList.contains('panLeftToClose')){
+			target = $(event.target).closest('.full-page').get(0);
+		}
+
+		var	offset = $(target).offset();
+		if(!APP.Functions.empty(offset)){
+			var offsetLeft = parseInt(offset.left);
+		}
+
+		this._objVariables.targetCurrentLeft = offsetLeft;
 	}
 };
