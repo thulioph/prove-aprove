@@ -34,8 +34,8 @@
     HEADER 
     ============================================================================= -->
   <header class="header-primary">
-    <a href="#">MENU</a>
-    <a href="#">USER CONFIG</a>
+    <a href="#" class="open-main-menu">MENU</a>
+    <a href="#" class="pull-right open-user-menu">USER CONFIG</a>
 	</header>
   <!-- =========================================================================
     MAIN 
@@ -49,17 +49,16 @@
       <nav class="main-nav template-nav">
         <ul>
           <li>MENU</li>
-          <li>Home</li>
-          <li>About</li>
-          <li>Contato</li>
+          <li><a href="#" data-id="#wrap-home" class="change-page">Home</a></li>
+          <li><a href="#" data-id="#wrap-contact" class="change-page">Contato</a></li>
         </ul>  
       </nav>
       <nav class="user-config-nav template-nav">
         <ul>
           <li>MENU CONFIG USUÁRIO</li>
           <li>Nome do Usuário</li>
-          <li>Perfil</li>
-          <li>deslogar</li>
+          <li><a href="#" data-id="#wrap-user-perfil" class="change-page">Perfil</a></li>
+          <li><a href="#">Deslogar</a></li>
         </ul>  
       </nav>
     </section>
@@ -67,7 +66,7 @@
     PAGES 
     ============================================================================= -->
     <!-- wrap-home -->
-    <section id="wrap-home" class="full-page ">
+    <section id="wrap-home" class="full-page active transition-normal">
       <div class="wrap-content">
         <h1>HOME</h1>
         <p>lorem ipsum lorem lorem ipsum lorem lorem ipsum lorem lorem ipsum lorem lorem ipsum lorem lorem ipsum lorem lorem ipsum lorem   </p>
@@ -78,10 +77,17 @@
       </div>
       -->
     </section>
-     <!-- wrap-contato -->
-    <section id="wrap-contact" class="full-page active">
+    <!-- wrap-contact -->
+    <section id="wrap-contact" class="full-page">
       <div class="wrap-content">
         <h1>CONTATO</h1>
+        <p>lorem ipsum lorem lorem ipsum lorem lorem ipsum lorem lorem ipsum lorem lorem ipsum lorem lorem ipsum lorem lorem ipsum lorem   </p>
+      </div>
+    </section>
+    <!-- wrap-contact -->
+    <section id="wrap-user-perfil" class="full-page">
+      <div class="wrap-content">
+        <h1>PERFIL USUÁRIO</h1>
         <p>lorem ipsum lorem lorem ipsum lorem lorem ipsum lorem lorem ipsum lorem lorem ipsum lorem lorem ipsum lorem lorem ipsum lorem   </p>
       </div>
     </section>
