@@ -5,6 +5,7 @@ APP.Navigation = {
 	_activePage: null,
 	_offCanvasLeft: "#off-canvas-left",
 	_page: ".full-page",
+	_mainMenu: ".main-nav",
 
 	init: function() {
 		APP.startModule(APP.Hammer);
@@ -27,8 +28,18 @@ APP.Navigation = {
 		}
 	},
 
-	showMenu: function(){
+	showMenu: function(type){
 		if(!$(this._offCanvasLeft).hasClass('active')){
+			if(!APP.Functions.empty(type) && !APP.Functions.empty(this._activePage)){
+				var modifier = "50%";
+				
+				if(type != this._mainMenu){
+					modifier = "-50%";
+				}
+
+				$(this._activePage).get(0).style.left = modifier;
+			}
+
 			var lastActivePage = $(this._page+".active").attr('id');	
 			this.setLastActivePage(lastActivePage);
 			
@@ -42,8 +53,15 @@ APP.Navigation = {
 		if($(this._offCanvasLeft).hasClass('active')){
 			$(this._offCanvasLeft).removeClass('active');
 			$("#"+this._lastActivePage).addClass('active');
-			this.setActivePage(this._lastActivePage);
+			this.setActivePage("#"+this._lastActivePage);
 		}
+	},
+
+	changePage: function(id){
+		$(this._page).removeClass('active')
+		 						 .addClass('transition-normal');
+		$(id).addClass('active');
+		this.setActivePage(id);
 	},
 
 	moveElement: function(event){
