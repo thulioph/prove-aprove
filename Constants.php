@@ -1,4 +1,4 @@
 <?php
-	define('_TITLE', 'ProveAprove.');
+	define('_TITLE', 'Prove Aprove.');
 	define('_BASEPATH', 'src/images/');
 ?>

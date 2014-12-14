@@ -12,9 +12,7 @@ label {
   text-transform: uppercase;
 }
 
-form {
-  text-align: center;
-}
+form { text-align: center;}
 
 .link {
   font-size: $fs-medium;
@@ -24,34 +22,108 @@ form {
   margin-top: 30px;
 }
 
+
+//
+// Signin, Signup and ChangePass
+//
+
+.signin,
+.signup,
+.change-pass {
+  @extend .app;
+
+  aside {
+    position: relative;
+    margin-top: 40px
+  }
+}
+
+.return-form {
+  font-size: $fs-medium;
+  margin-top: 40px;
+  text-align: center;
+}
+
+
 //
 // Header
 //
 
 .header-primary {
-  height: auto;
-  max-height: 120px;
+  width: 100%;
+  height: 60px;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 11;
   background-color: $gray-lighter;
+  @include bsd(0 1px 3px $gray-base);
 }
 
 .link-global {
   position: relative;
-  color: $gray-base;
+  font-size: $fs-extra-large;
+  color: $gray-light;
   height: 60px;
+  display: inline-block;
+  padding-top: 8px;
 
   &:first-child {
-    background-color: orange;
-
-    &::before {
-      content: "\e056";
-      position: absolute;
-      @extend %glyphicon;
-    }
+    float: left;
+    margin-left: 10px;
   }
+
+  &:last-child {
+    float: right;
+    margin-right: 10px;
+  }
+}
+
+
+//
+// Main
+//
+
+.main {
+  margin-top: 60px;
+  padding: 0;
+}
+
+.greeting {
+  text-align: center;
+  font-size: $fs-small;
+  padding-bottom: 10px;
+}
+
+.recipe-item {
+  height: 200px;
+  margin-bottom: 5px;
+  display: inline-block;
+  width: 50%;
+  margin-left: -1px;
+  background-color: #eee;
+  position: relative;
+  overflow: hidden;
+  vertical-align: middle;
+
+  &.featured {
+    width: 100%;
+  }
+}
+
+.recipe-title {
+  background-color: rgba(0,0,0, .5);
+  padding: 10px 20px;
+  text-align: center;
+  color: #fff;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  max-width: 140px;
+  display: inline-block;
+  @include truncate();
 }
 
 
@@ -78,22 +150,91 @@ form {
 
 
 //
-// Signin, Signup and ChangePass
+// Recipe Internal
 //
 
-.signin,
-.signup,
-.change-pass {
-  @extend .app;
-
-  aside {
+.recipes-info {
+  header {
+    margin-bottom: 10px;
     position: relative;
-    margin-top: 40px
+
+    .image {
+      height: 200px;
+      background-repeat: no-repeat;
+      background-position: 100% 30px;
+      background-attachment: fixed;
+      @include path('recipes/lasanha.jpg');
+    }
+
+    h3 {
+      margin-left: 10px;
+      float: left;
+      max-width: 250px;
+    }
   }
 }
 
-.return-form {
-  font-size: $fs-medium;
-  margin-top: 40px;
+.recipes-time {
+  float: right;
+  color: $gray-light;
+  font-size: $fs-small;
+  margin: 25px 10px 0 0;
+}
+
+.recipes-preparation {
+  clear: both;
+
+  li {
+    margin-left: 10px;
+    font-size: $fs-small;
+    font-family: $ff-text;
+
+    &::before {
+      content: '-';
+      display: inline-block;
+      vertical-align: middle;
+      font-size: $fs-small;
+      margin-right: 10px;
+    }
+  }
+
+  p {
+    padding: 0 10px;
+    margin: 20px 0;
+    font-size: $fs-small;
+    font-family: $ff-text;
+    line-height: $fs-large;
+  }
+}
+
+.recipes-options {
   text-align: center;
+  height: 100px;
+
+  label {
+    text-transform: none;
+    font-size: $fs-smallest;
+  }
+
+  input {
+    width: 42px;
+    height: 42px;
+    opacity: .5;
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    @include apr(none);
+    @include transition(opacity, .2s, linear, 0s);
+
+    &:checked {
+      opacity: 1;
+    }
+
+    &.approve {
+      @include path('ico-approve.png');
+    }
+
+    &.favorite {
+      @include path('ico-favorite.png');
+    }
+  }
 }

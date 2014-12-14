@@ -1,11 +1,9 @@
-<?php include('Constants.php'); ?>
-
-<!doctype html>
-<html xmlns:og="http://ogp.me/ns" lang="pt-br">
+<!DOCTYPE html>
+<html xmlns:og="http://ogp.me/ns" lang="en">
 <head>
   <meta charset="utf-8" />
 
-  <title><?php echo _TITLE ?></title>
+  <title>Prove & Aprove</title>
 
   <!-- META TAGS -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
