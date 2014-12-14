@@ -9,8 +9,9 @@ $fs-medium:         1.8rem;
 $fs-small:          1.4rem;
 
 // Family
-$ff-general:        'Titillium Web', sans-serif;
-$ff-secondary:      'Xilosa';
+$ff-primary:        'FuturaLTBook';
+$ff-title:          'FuturaLTHeavy';
+$ff-icon:           'Glyphicons Halflings';
 
 // Style
 $f-italic:          italic;
@@ -24,4 +25,33 @@ $fw-semi-bold:      600;
 @font-face {
   font-family: 'Xilosa';
   src: url('http://www.fontsaddict.com/fontface/xilosa.ttf');
+}
+
+@font-face {
+    font-family: 'FuturaLTHeavy';
+    src: url('../../fonts/futuralt-heavy.eot');
+    src: url('../../fonts/futuralt-heavy.eot') format('embedded-opentype'),
+         url('../../fonts/futuralt-heavy.woff2') format('woff2'),
+         url('../../fonts/futuralt-heavy.woff') format('woff'),
+         url('../../fonts/futuralt-heavy.ttf') format('truetype'),
+         url('../../fonts/futuralt-heavy.svg#FuturaLTHeavy') format('svg');
+}
+
+@font-face {
+    font-family: 'FuturaLTBook';
+    src: url('../../fonts/futuralt-book.eot');
+    src: url('../../fonts/futuralt-book.eot') format('embedded-opentype'),
+         url('../../fonts/futuralt-book.woff2') format('woff2'),
+         url('../../fonts/futuralt-book.woff') format('woff'),
+         url('../../fonts/futuralt-book.ttf') format('truetype'),
+         url('../../fonts/futuralt-book.svg#FuturaLTBook') format('svg');
+}
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url("../../fonts/glyphicons-halflings-regular.eot");
+  src: url("../../fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"),
+  url("../../fonts/glyphicons-halflings-regular.woff") format("woff"),
+  url("../../fonts/glyphicons-halflings-regular.ttf") format("truetype"),
+  url("../../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
 }
