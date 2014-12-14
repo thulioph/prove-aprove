@@ -10,6 +10,7 @@ AddType text/cache-manifest .manifest
   RewriteRule ^signin/?$ signin.php [NC,L]
   RewriteRule ^signup/?$ signup.php [NC,L]
   RewriteRule ^change-pass/?$ change-pass.php [NC,L]
+  RewriteRule ^receita-interna/?$ receita-interna.php [NC,L]
 </IfModule>
 
 # Utilizando o mod_deflate para compressão de arquivos
