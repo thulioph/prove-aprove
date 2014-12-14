@@ -53,6 +53,11 @@
         ],
 
         "dist/js/libs.min.js": [
+          "bower_components/jquery/dist/jquery.min.js"
+          ,"src/js/libs/classListfix.js"
+          ,"bower_components/iscroll/build/iscroll.js"
+          ,"bower_components/fastclick/lib/fastclick.js"
+          ,"bower_components/hammerjs/hammer.min.js"
         ]
       }
     }
