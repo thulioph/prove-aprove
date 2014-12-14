@@ -77,6 +77,8 @@
               </div>
             </footer>
           </aside>
+
+          <button id="back-internal" class="btn btn-primary btn-lg btn-block">Voltar</button>
         </section>
       </main>
     </div>
