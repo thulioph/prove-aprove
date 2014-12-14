@@ -4,14 +4,18 @@
 
 // Size
 $fs-root:           62.5%;
+$fs-extra-large:    3.5rem;
 $fs-large:          2.4rem;
 $fs-medium:         1.8rem;
 $fs-small:          1.4rem;
+$fs-extra-small:    1.2rem;
+$fs-smallest:       1rem;
 
 // Family
 $ff-primary:        'FuturaLTBook';
 $ff-title:          'FuturaLTHeavy';
 $ff-icon:           'Glyphicons Halflings';
+$ff-text:           'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
 
 // Style
 $f-italic:          italic;
@@ -22,11 +26,6 @@ $fw-light:          300;
 $fw-semi-bold:      600;
 
 // Custom Font Face
-@font-face {
-  font-family: 'Xilosa';
-  src: url('http://www.fontsaddict.com/fontface/xilosa.ttf');
-}
-
 @font-face {
     font-family: 'FuturaLTHeavy';
     src: url('../../fonts/futuralt-heavy.eot');
