@@ -5,6 +5,26 @@
 body {
   font-size: $fs-root;
   font-family: $ff-primary;
+
+  &.js-offline {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: attr(data-status);
+      padding-top: 50%;
+      color: #fff;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+      z-index: 99;
+      background-color: rgba(0, 0, 0, .6);
+      font-size: $fs-medium;
+      text-align: center;
+    }
+  }
 }
 
 label {
