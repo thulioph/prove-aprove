@@ -23,5 +23,14 @@ APP.OffCanvas = {
     var href = href.replace('#', '');
 
     $('#main section').toggleClass('js-open-' + href);
+  },
+
+  // used with APP.Request.js
+  initialState: function() {
+    var open = $('.open');
+
+    open.removeClass('open');
+
+    $('#main section').removeClass();
   }
 };

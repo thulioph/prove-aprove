@@ -2,21 +2,13 @@
 
 <body>
   <div class="container-fluid">
-    <header id="header-primary" class="header-primary">
-      <a href="#" id="menu" class="link-global">
-        <span class="glyphicon glyphicon-list"></span>
-      </a>
-
-      <a href="#" id="user" class="link-global">
-        <span class="glyphicon glyphicon-user"></span>
-      </a>
-    </header>
+    <?php include('_header.php'); ?>
 
     <div class="row">
-      <main id="main" class="col-xs-12 main">
-        <h3 class="greeting text-info">Que tal fazer esta receita?</h3>
-
+      <main id="main" class="main">
         <section id="recipes-internal" class="recipes">
+          <h3 class="greeting text-info">Que tal fazer esta receita?</h3>
+
           <aside class="recipes-info">
             <header>
               <div class="image"></div>
