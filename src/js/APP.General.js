@@ -1,6 +1,7 @@
 var APP  = APP || {};
 APP.General = {
   setUp: function() {
+    FastClick.attach(document.body);
     this.getClick();
   },
 

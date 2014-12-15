@@ -4998,6 +4998,8 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 body {
   font-size: 62.5%;
   font-family: "FuturaLTBook";
+  width: 100%;
+  height: 100%;
 }
 body.js-offline {
   position: relative;
@@ -5081,8 +5083,27 @@ form {
 }
 
 .main {
+  position: absolute;
   margin-top: 60px;
   padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.main section {
+  position: relative;
+  left: 0;
+  -webkit-transition: left 500ms ease 0s;
+  -moz-transition: left 500ms ease 0s;
+  -ms-transition: left 500ms ease 0s;
+  -o-transition: left 500ms ease 0s;
+  transition: left 500ms ease 0s;
+}
+.main section.js-open-categories {
+  left: 100px;
+}
+.main section.js-open-config {
+  left: -100px;
 }
 
 .greeting {
@@ -5222,4 +5243,85 @@ form {
 }
 .recipes-options input.favorite {
   background-image: url("../../src/images/ico-favorite.png");
+}
+
+.off-canvas {
+  position: absolute;
+  z-index: 10;
+  height: 100%;
+  margin-top: 60px;
+  width: 100%;
+}
+.off-canvas.categories {
+  background-color: #fff;
+  left: -100%;
+  -webkit-transition: left 500ms ease 0s;
+  -moz-transition: left 500ms ease 0s;
+  -ms-transition: left 500ms ease 0s;
+  -o-transition: left 500ms ease 0s;
+  transition: left 500ms ease 0s;
+}
+.off-canvas.categories.open {
+  left: 0;
+}
+.off-canvas.config {
+  right: -100%;
+  background-color: #fff;
+  -webkit-transition: right 500ms ease 0s;
+  -moz-transition: right 500ms ease 0s;
+  -ms-transition: right 500ms ease 0s;
+  -o-transition: right 500ms ease 0s;
+  transition: right 500ms ease 0s;
+}
+.off-canvas.config.open {
+  right: 0;
+}
+
+.input-search {
+  margin-bottom: 10px;
+}
+
+.categories-link {
+  display: block;
+  padding: 5px 10px;
+  border-bottom: 1px solid #000;
+  color: #777777;
+  font-size: 1.8rem;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  text-decoration: none;
+  -webkit-transition: all 0.2s ease 0s;
+  -moz-transition: all 0.2s ease 0s;
+  -ms-transition: all 0.2s ease 0s;
+  -o-transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s;
+}
+.categories-link:hover, .categories-link:active {
+  color: #ffffff;
+  background-color: #5bc0de;
+}
+
+.config-item:nth-child(6) {
+  margin-top: 40px;
+}
+.config-item:nth-child(6), .config-item:nth-child(7) {
+  text-align: right;
+}
+
+.config-link {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  color: #fff;
+  font-size: 1.8rem;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  text-decoration: none;
+  background-color: #5bc0de;
+  -webkit-transition: all 0.2s ease 0s;
+  -moz-transition: all 0.2s ease 0s;
+  -ms-transition: all 0.2s ease 0s;
+  -o-transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s;
+}
+.config-link:hover, .config-link:active {
+  background-color: #ffffff;
 }

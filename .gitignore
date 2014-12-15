@@ -5,3 +5,4 @@ node_modules/*
 .gitignore
 bower_components/*
 bower_components/*/**
+leo.php
