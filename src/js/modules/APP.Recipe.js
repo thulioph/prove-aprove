@@ -23,7 +23,7 @@ APP.Recipe = {
             this.getVariables();
             this.bindEvents();
 
-            var url =  "listar_receitas.php?filtro=categoria&id=" + this._idCategory;
+            var url =  "listar_receitas.php?filtro=usuario&id=leandro@gmail.com";
             APP.Storage.getRecipeByCategory(url,this.ajaxSuccess);
 
             this._initialized = true;
