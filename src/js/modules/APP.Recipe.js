@@ -15,13 +15,16 @@ APP.Recipe = {
     _moduleContainerSelector: '#wrap-home',
     _blockListSelector: ".block-list",
     _emptyMessage: "Nenhuma receita encontrada",
+    _idCategory: 3,
     //
 
     init: function(){
         if(!this._initialized){
             this.getVariables();
             this.bindEvents();
-            APP.Storage.getRecipeByCategory('listar_receitas.php',this.ajaxSuccess);
+
+            var url =  "listar_receitas.php?filtro=usuario&id=leandro@gmail.com";
+            APP.Storage.getRecipeByCategory(url,this.ajaxSuccess);
 
             this._initialized = true;
         }else{

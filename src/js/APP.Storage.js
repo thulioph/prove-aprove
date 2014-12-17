@@ -17,7 +17,7 @@ APP.Storage = {
       var that = this;
 
       $.ajax({
-        type: "POST",
+        type: "GET",
         url: url,
         //async: false,
         data: {},
