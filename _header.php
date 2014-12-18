@@ -13,20 +13,7 @@
   <h3 class="greeting text-info">Escolha alguma categoria.</h3>
   <input type="search" class="input-search form-control" placeholder="Busque alguma categoria digitando.">
 
-  <ul id="categories-list" class="categories-list">
-    <li class="categories-item"><a href="recipes/aves.html" class="categories-link">Aves</a></li>
-    <li class="categories-item"><a href="#" class="categories-link">Bebidas</a></li>
-    <li class="categories-item"><a href="#" class="categories-link">Bolos</a></li>
-    <li class="categories-item"><a href="#" class="categories-link">Carnes</a></li>
-    <li class="categories-item"><a href="#" class="categories-link">Doces</a></li>
-    <li class="categories-item"><a href="#" class="categories-link">Especiais</a></li>
-    <li class="categories-item"><a href="#" class="categories-link">Lanches</a></li>
-    <li class="categories-item"><a href="#" class="categories-link">Massas</a></li>
-    <li class="categories-item"><a href="#" class="categories-link">Peixes e Frutos do Mar</a></li>
-    <li class="categories-item"><a href="#" class="categories-link">Prato Único</a></li>
-    <li class="categories-item"><a href="#" class="categories-link">Saladas</a></li>
-    <li class="categories-item"><a href="#" class="categories-link">Sopas</a></li>
-  </ul>
+  <ul id="categories-list" class="categories-list"></ul>
 </aside>
 
 <!-- offcanvas right -->

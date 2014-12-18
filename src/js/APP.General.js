@@ -63,6 +63,7 @@ APP.General = {
 
                 // cria a estrutura de receitas
                 APP.General.createStructureListaReceitas(titulo, id);
+                APP.General.createStructureCategories(categoria);
           }
 
         } else if (dados.status == false) {
@@ -113,5 +114,80 @@ APP.General = {
         recipes.appendChild(li);
 
         // recipes.appendChild(ul);
+  },
+
+  ajaxReceitasPorCategoria: function() {
+  },
+
+  ajaxCatagories: function() {
+    $.ajax({
+      url: 'listar_receitas.php',
+      type: 'GET',
+      dataType: 'JSON',
+
+      beforeSend: function() {
+        // var recipes, recipesContent;
+
+        // recipes = document.querySelector('#recipes');
+
+        // recipesContent = document.createElement('div');
+        // recipesContent.setAttribute('id', 'recipes-content');
+        // recipesContent.innerHTML = 'Carregando conteúdo..';
+
+        // recipes.appendChild(recipesContent);
+      },
+
+      success: function(data) {
+        if (data.status == true) {
+          $('#recipes-content').remove(); // remove mensagem de carregando conteúdo
+
+          for (var i = 0; i < data.dados.length; i++) {
+            var id = data.dados[i].id,
+            titulo = data.dados[i].titulo,
+            autor = data.dados[i].autor,
+            categoria = data.dados[i].categoria,
+            media = data.dados[i].media,
+            gostou = data.dados[i].gostou,
+            favorita = data.dados[i].favorita;
+
+                // console.log(id, titulo, autor, categoria, media, gostou, favorita);
+
+                // cria a estrutura de receitas
+                APP.General.createStructureListaReceitas(titulo, id);
+              }
+
+            } else if (dados.status == false) {
+              console.log('Não tem dados!');
+            }
+          },
+
+          error: function(error) {
+            $('#recipes').text(error);
+          }
+        });
+  },
+
+  createStructureCategories: function(categoria, id) {
+    var ul, li, a;
+
+    ul = document.querySelector('#categories-list'),
+    li = document.createElement('li'),
+    a = document.createElement('a');
+
+    // adiciona as classes
+    li.classList.add('categories-item');
+    a.classList.add('categories-link');
+
+    // adiciona atributos
+    a.setAttribute('href', '#');
+    a.setAttribute('data-id', id);
+    a.setAttribute('title', categoria);
+
+    // insere o conteúdo
+    a.innerHTML = categoria;
+
+    // faz o append
+    li.appendChild(a);
+    ul.appendChild(li);
   }
 };
