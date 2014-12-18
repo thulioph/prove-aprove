@@ -1,3 +1,7 @@
+// ==========================================
+// Verifica se o usuário possui conexão
+// ==========================================
+
 var APP  = APP || {};
 APP.Status = {
   setUp: function() {

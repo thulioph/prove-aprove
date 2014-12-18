@@ -1,3 +1,7 @@
+// ==========================================
+// Manipula o offcanvas do app
+// ==========================================
+
 var APP  = APP || {};
 APP.OffCanvas = {
   setUp: function() {

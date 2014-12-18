@@ -1,3 +1,7 @@
+// ==========================================
+// Chamadas gerais para diversas coisas
+// ==========================================
+
 var APP  = APP || {};
 APP.General = {
   setUp: function() {
@@ -319,5 +323,17 @@ APP.General = {
           main.appendChild(h3);
           main.appendChild(aside);
           main.appendChild(button);
+  },
+
+  // Direciona o usuário até a index
+  goBack: function() {
+    var appSteps, href;
+
+    href = window.location.href;
+    appSteps = document.querySelector('#app-steps');
+
+    $(appSteps).on('click', 'button', function(event) {
+      window.location.href = href + this.id;
+    });
   }
 };

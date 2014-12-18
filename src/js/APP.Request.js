@@ -1,3 +1,7 @@
+// ==========================================
+// Efetua request e usa localStorage
+// ==========================================
+
 var APP = APP || {};
 APP.Request = {
   setUp: function() {

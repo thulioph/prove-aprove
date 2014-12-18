@@ -5,7 +5,6 @@
   <script src="src/js/APP.js"></script>
   <script src="src/js/APP.General.js"></script>
   <script src="src/js/APP.OffCanvas.js"></script>
-  <script src="src/js/APP.Redirect.js"></script>
   <script src="src/js/APP.Status.js"></script>
   <script src="src/js/APP.Request.js"></script>
 
