@@ -28,6 +28,15 @@ APP.General = {
     }
   },
 
+  getLocalStorageListaReceitas: function(key) {
+    if (localStorage.getItem(key) == null) {
+      APP.Request.ajax(href, key);
+    } else {
+      var href = JSON.parse(localStorage.getItem(key)); // parse of localStorage
+      $('#main').html(href);
+    }
+  },
+
   ajaxListaReceitas: function() { // lista todas as receitas em /app
     $.ajax({
       url: 'listar_receitas.php',
@@ -48,6 +57,9 @@ APP.General = {
 
       success: function(data) {
         if (data.status == true) {
+
+          APP.General.getLocalStorageListaReceitas('app');
+
           $('#recipes-content').remove(); // remove mensagem de carregando conteúdo
 
           for (var i = 0; i < data.dados.length; i++) {
@@ -67,6 +79,9 @@ APP.General = {
           }
 
           APP.General.getIdReceita(); // pega o data-id do elemento
+
+          var data = $('#main').html();
+          APP.Request.convertString(data, 'app'); // converte pra string e guarda no localstorage pra acessar no back.
 
         } else if (dados.status == false) {
           console.log('Não tem dados!');
