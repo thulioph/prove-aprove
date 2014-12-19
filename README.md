@@ -17,6 +17,8 @@ O app utilizada de alguns recursos como:
  - APP Cache
  - LocalStorage
 
+ Existem algumas coisas que estão pendentes e serão listadas nas [`issues`](https://github.com/thulioph/prove-aprove/issues)
+
 ## Instalação
 
 1. Se você não tem instalado [npm](http://npmjs.org), [bower](http://bower.io) e [grunt](http://gruntjs.com/), faça isso agora.
