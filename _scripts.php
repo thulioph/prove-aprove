@@ -6,6 +6,7 @@
   <script src="src/js/APP.OffCanvas.js"></script>
   <script src="src/js/APP.General.js"></script>
   <script src="src/js/APP.Request.js"></script>
+  <script src="src/js/APP.Storage.js"></script>
   <script src="src/js/APP.Request.Receitas.js"></script>
   <script src="src/js/APP.Request.ReceitasInterna.js"></script>
   <script src="src/js/APP.Request.Receitas.Usuario.js"></script>

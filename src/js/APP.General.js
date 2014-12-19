@@ -8,7 +8,7 @@ APP.General = {
     FastClick.attach(document.body);
 
     this.redirect();
-    this.checkUrl();
+    this.checkBody();
   },
 
   // retorna um nível
@@ -21,17 +21,16 @@ APP.General = {
     $(back).on('click', function(event) {
       event.preventDefault();
       window.location.href = href;
-      // window.history.back();
     });
   },
 
-  // checa a url para a requisição
-  checkUrl: function() {
-    var url;
+  // checa o body para a requisição
+  checkBody: function() {
+    var app;
 
-    url = 'http://localhost:9999/unibratec-pos/projeto-final/prove-aprove/app';
+    app = $('body').attr('data-screen');
 
-    if (location.href == url) {
+    if (app == 'app') {
       APP.Request.Receitas.ajax();
     } else {
       return console.log('Diferente');

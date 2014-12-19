@@ -8,13 +8,13 @@ APP.Request.ReceitasInterna = {
   setUp: function() {
   },
 
-  ajax: function(id) {
+  ajax: function(url, key) {
     var that = this;
 
     $('#recipes').remove(); // remove conteúdo da home
 
     $.ajax({
-      url: 'listar_receitas.php?filtro=receita&id='+id,
+      url: url,
       type: 'GET',
       dataType: 'JSON',
 
@@ -52,6 +52,10 @@ APP.Request.ReceitasInterna = {
 
           // pega o click do botão e volta
           APP.General.goBack();
+
+          // insere os dados no localStorage
+          var receitaInterna = $('#main').html();
+          APP.Storage.convertString(key, receitaInterna);
 
         } else if (data.status == false) {
           console.log(data.mensagem);

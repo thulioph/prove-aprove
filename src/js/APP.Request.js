@@ -17,9 +17,9 @@ APP.Request = {
     $('#categories-list').on('click', 'a', function(event) {
       event.preventDefault();
 
-      id = $(this).attr('data-id'); //valor
+      id = $(this).attr('data-id');
+      APP.Storage.getStorageReceitasInterna('categoria'+id, 'listar_receitas.php?filtro=receita&id='+id);
 
-      APP.Request.ReceitasInterna.ajax(id);
       APP.OffCanvas.initialState(); // retorna o menu após o clique
     });
 
@@ -29,7 +29,7 @@ APP.Request = {
       event.preventDefault();
 
       var id = $(this).attr('data-id');
-      APP.Request.ReceitasInterna.ajax(id);
+      APP.Storage.getStorageReceitasInterna('categoria'+id, 'listar_receitas.php?filtro=receita&id='+id);
     });
 
 
@@ -41,23 +41,5 @@ APP.Request = {
       APP.Request.Receitas.Usuario.ajax(user);
       APP.OffCanvas.initialState(); // retorna o menu após o clique
     });
-  },
-
-  convertString: function(href, text) {
-    var string = JSON.stringify(href);
-    APP.Request.insertLocalStorage(string, text);
-  },
-
-  insertLocalStorage: function(string, text) {
-    localStorage.setItem(text, string);
-  },
-
-  getLocalStorage: function(text, href) {
-    if (localStorage.getItem(text) == null) {
-      APP.Request.ajax(href, text); //se a chave não existir faz a requisição
-    } else {
-      var href = JSON.parse(localStorage.getItem(text));
-      $('#main').html(href); // se existir, faz o parse e põe na tela
-    }
   }
 }
