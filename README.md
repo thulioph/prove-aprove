@@ -7,7 +7,7 @@ Leonardo Paiva | Thulio Philipe | Daniel Freitas
 <a href="https://github.com/leonardopaiva">![Leonardo Paiva](https://avatars.githubusercontent.com/u/6975831?v=3&s=128)</a> | <a href="https://github.com/thulioph">![Thulio Philipe](https://avatars2.githubusercontent.com/u/2343288?v=3&s=128)</a> | <a href="https://www.facebook.com/daniel.freitassatierf">![Daniel Freitas](https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpf1/v/t1.0-1/p160x160/1925090_878411402183922_3742662771100211456_n.jpg?oh=fba82fb8d02eb4eea562734142018036&oe=55379FE9&__gda__=1430685062_c1dcc862f93ffda02d5e115e38742537)</a>
 Front-End/Back-End | Front-End | Back-End
 
-## O que foi feito?
+## O projeto
 
 O **Prove & Aprove** é um webapp criado utilizando `PHP` + `CSS` + `JS` e foi desenvolvido para conclusão do curso de pós graduação em DWA pela Unibratec.
 
@@ -17,7 +17,7 @@ O app utilizada de alguns recursos como:
  - APP Cache
  - LocalStorage
 
- Existem algumas coisas que estão pendentes e serão listadas nas [`issues`](https://github.com/thulioph/prove-aprove/issues)
+> Existem algumas coisas que estão pendentes e serão listadas nas [`issues`](https://github.com/thulioph/prove-aprove/issues)
 
 ## Instalação
 
