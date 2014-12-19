@@ -22,10 +22,10 @@
 
   <ul class="config-list">
     <li class="config-item"><a href="#" class="config-link">Adicionar Receita</a></li>
-    <li class="config-item"><a href="#" class="config-link">Minhas Receitas</a></li>
-    <li class="config-item"><a href="#" class="config-link">Receitas Favoritas</a></li>
-    <li class="config-item"><a href="#" class="config-link">Receitas Aprovadas</a></li>
-    <li class="config-item"><a href="#" class="config-link">Receitas Avaliadas</a></li>
+    <li class="config-item"><a  href="#" class="config-link" id="meu-usuario">Minhas Receitas</a></li>
+    <li class="config-item"><a href="#" class="config-link" id="favoritas">Receitas Favoritas</a></li>
+    <li class="config-item"><a href="#" class="config-link" id="aprovadas">Receitas Aprovadas</a></li>
+    <li class="config-item"><a href="#" class="config-link" id="avaliadas">Receitas Avaliadas</a></li>
     <li class="config-item"><a href="#" class="config-link">Alterar Senha</a></li>
     <li class="config-item"><a href="index" class="config-link">Sair</a></li>
   </ul>
