@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:og="http://ogp.me/ns" lang="en">
+<html xmlns:og="http://ogp.me/ns" lang="en" manifest="cache.manifest">
 <head>
   <meta charset="utf-8" />
 

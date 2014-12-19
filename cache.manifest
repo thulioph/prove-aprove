@@ -1,0 +1,25 @@
+CACHE MANIFEST
+#Versão 2.0
+
+CACHE:
+
+dist/css/style.min.css
+dist/js/libs.min.js
+src/js/APP.js
+src/js/APP.Status.js
+src/js/APP.OffCanvas.js
+src/js/APP.General.js
+src/js/APP.Request.js
+src/js/APP.Storage.js
+src/js/APP.Request.Receitas.js
+src/js/APP.Request.ReceitasInterna.js
+src/js/APP.Request.Receitas.Usuario.js
+dist/images/ico-approve.png
+dist/images/ico-favorite.png
+
+NETWORK:
+*
+
+FALLBACK:
+dist/images/recipes/ offline/sem-imagem.jpg
+http://placehold.it/160x200 offline/sem-imagem.jpg
