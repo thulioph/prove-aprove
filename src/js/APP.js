@@ -43,9 +43,32 @@ app.controller('forgotPass', function($scope) {
   $scope.title = 'Esqueceu a senha';
 });
 
+// adiciono uns parâmetros de rota através do $routeParams
+// adiciono um filtro.
+app.controller('receita', function($scope, $filter, $routeParams, ListReceitas) {
+  $scope.title = 'Receita Interna';
+
+  var meuFiltro = $filter;
+
+  // chamando o método ListReceitas
+  ListReceitas.getReceitas(function(data) {
+    $scope.receita = meuFiltro('filter')(data, {
+      id: $routeParams.id
+    })[0];
+    debugger;
+  });
+
+});
+
+app.controller('user', function($scope) {
+  $scope.title = 'Usuário';
+});
+
 // abaixo eu injeto o factory ListReceitas no meu controller
 app.controller('receitas', function($scope, ListReceitas) {
   $scope.title = 'Receitas';
+  $scope.saudacao = 'Qual receita você deseja fazer?';
+
   $scope.receitas = {};
 
   // chamando o método ListReceitas
@@ -54,16 +77,9 @@ app.controller('receitas', function($scope, ListReceitas) {
   });
 });
 
-app.controller('receita', function($scope) {
-  $scope.title = 'Receita Interna';
-});
-
-app.controller('user', function($scope) {
-  $scope.title = 'Usuário';
-});
 
 // Definição dos services
-app.factory('ListReceitas', [function () {
+app.factory('ListReceitas', function ($http) {
 
   var listaDeReceitas;
 
@@ -89,11 +105,10 @@ app.factory('ListReceitas', [function () {
     }
   }
 
-  return {
-
-  };
-}])
+  return obj;
+});
 
 
 // O factory `listReceitas` verifica se as receitas existem, se não existir ele faz uma requisição para a url informada e guarda os dados com o `saveReceitas` para evitar fazer mais requisições.
 
+// Um factory é um singleton então ele sempre tem que retornar um objeto.
