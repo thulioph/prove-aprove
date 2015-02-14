@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:og="http://ogp.me/ns" lang="en">
+<head>
+  <meta charset="utf-8" />
+
+  <title>Prove & Aprove</title>
+
+  <!-- META TAGS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="apple-touch-fullscreen" content="yes" />
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="format-detection" content="telephone=yes">
+
+  <!-- Apple Touch Icon -->
+  <link rel="apple-touch-icon" href="touch-icon@2x.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="touch-icon-ipad.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="touch-icon@2x.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad@2x.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="bower_components/fries/dist/themes/holo-dark/holo-dark.min.css">
+  <link rel="stylesheet" href="src/css/main.css">
+
+  <!-- JS -->
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular-route/angular-route.min.js"></script>
+  <script src="bower_components/fastclick/lib/fastclick.js"></script>
+</head>
+
+<body ng-app="proveAprove">
+
+  <section id="content" class="content">
+    <ng-view></ng-view>
+  </section>
+
+   <script src="src/js/app.js"></script>
+</body>
+</html>
+
+<!--
+
+  Quando se trabalha com Rotas, é necessário utilizar um diretiva chamada `ng-view` e todo o template será inserido dentro quando cair na condição definida no `.when`.
+
+
+
+ -->
