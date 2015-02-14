@@ -1,0 +1,31 @@
+<header class="action-bar fixed-top">
+  <a href="#" class="app-icon action">
+    <i class="icon-fries"></i>
+  </a>
+
+  <h1 class="title">{{title}}</h1>
+
+  <ul class="actions pull-right">
+    <li>
+      <a href="javascript:;" class="action" title="Settings">
+        <i class="icon-settings"></i>
+      </a>
+    </li>
+  </ul>
+</header>
+
+<section class="content-receitas">
+  <h3 class="saudacao">{{saudacao}}</h3>
+
+  <ul class="receitas-lista list inset">
+    <li class="receitas-item" ng-repeat="receita in receitas | orderBy: 'media'">
+      <a href="#/receita/{{receita.id}}">
+        <h3>{{receita.titulo}}</h3>
+        <figure>
+          <img src="src/images/receitas/{{receita.imagem}}.jpg" alt="{{receita.titulo}}">
+        </figure>
+        <p class="media">Média: {{receita.media}}</p>
+      </a>
+    </li>
+  </ul>
+</section>
