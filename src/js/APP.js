@@ -20,6 +20,9 @@ var app = angular.module('proveAprove', ['ngRoute']).config(function($routeProvi
     templateUrl: 'templates/receita.html',
     controller: 'receita'
   })
+  .otherwise({
+    redirectTo: '/receitas'
+  });
 });
 
 app.controller('signin', function($scope) {
