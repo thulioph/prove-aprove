@@ -1,0 +1,86 @@
+{
+   "status":true,
+   "dados":[
+      {
+         "id":"9",
+         "titulo":"Suco de Uva",
+         "autor":"Leandro Rodrigo",
+         "categoria":"Bebidas",
+         "media":"0.0",
+         "gostou":"0",
+         "favorita":"0"
+      },
+      {
+         "id":"8",
+         "titulo":"Suco de Abacaxi",
+         "autor":"Leandro Rodrigo",
+         "categoria":"Bebidas",
+         "media":"0.0",
+         "gostou":"0",
+         "favorita":"0"
+      },
+      {
+         "id":"7",
+         "titulo":"Vitamina de Banana",
+         "autor":"Leandro Rodrigo",
+         "categoria":"Bebidas",
+         "media":"0.0",
+         "gostou":"0",
+         "favorita":"0"
+      },
+      {
+         "id":"6",
+         "titulo":"Achocolatado Batido",
+         "autor":"Leandro Rodrigo",
+         "categoria":"Bebidas",
+         "media":"0.0",
+         "gostou":"0",
+         "favorita":"0"
+      },
+      {
+         "id":"5",
+         "titulo":"Bebida forte",
+         "autor":"Rosalva Freire",
+         "categoria":"Bebidas",
+         "media":"0.0",
+         "gostou":"0",
+         "favorita":"0"
+      },
+      {
+         "id":"4",
+         "titulo":"Fricass\u00ea de carne moida a moda do chefe",
+         "autor":"Rosalva Freire",
+         "categoria":"Carnes",
+         "media":"0.0",
+         "gostou":"0",
+         "favorita":"0"
+      },
+      {
+         "id":"3",
+         "titulo":"Picanha na cerveja preta",
+         "autor":"Rosalva Freire",
+         "categoria":"Carnes",
+         "media":"0.0",
+         "gostou":"0",
+         "favorita":"0"
+      },
+      {
+         "id":"2",
+         "titulo":"Costela Bovina a moda do chefe",
+         "autor":"Rosalva Freire",
+         "categoria":"Carnes",
+         "media":"0.0",
+         "gostou":"1",
+         "favorita":"0"
+      },
+      {
+         "id":"1",
+         "titulo":"Ovo frito especial",
+         "autor":"Leandro Rodrigo",
+         "categoria":"Especiais",
+         "media":"0.0",
+         "gostou":"0",
+         "favorita":"1"
+      }
+   ]
+}
