@@ -1,8 +1,35 @@
 <header class="action-bar">
-  <a href="#" class="app-icon action up" data-transition="pop">
+  <a href="#/receitas/" class="app-icon action up" data-transition="pop">
     <span class="icon-up-button"></span>
     <span class="icon-fries"></span>
   </a>
 
-  <h1 class="title">{{id}}</h1>
+  <h1 class="title">{{title}}</h1>
 </header>
+
+<section class="content-receitas">
+  <h3 class="saudacao">{{saudacao}}</h3>
+
+  <aside class="receita-interna">
+    <header>
+      <figure>
+        <img src="src/images/receitas/{{receita.imagem}}.jpg" alt="{{receita.titulo}}">
+      </figure>
+
+      <h3>{{receita.titulo}}</h3>
+      <p>{{receita.tempoDePreparo}} - {{receita.rendimento}}</p>
+    </header>
+
+    <div>
+      <ul>
+        <li class="ingredientes">{{receita.ingredientes}}</li>
+      </ul>
+
+      <p class="modo-de-preparo"> {{receita.modoDePreparo}} </p>
+
+      <footer>
+        <small>Receita por: {{receita.autor}}</small>
+      </footer>
+    </div>
+  </aside>
+</section>
