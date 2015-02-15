@@ -41,6 +41,10 @@ var app = angular.module('proveAprove', ['ngRoute']).config(function($routeProvi
     templateUrl: 'templates/splash.html',
     controller: 'splash'
   })
+  .when('/menu/', {
+    templateUrl: 'templates/menu.html',
+    controller: 'menu'
+  })
   .otherwise({
     redirectTo: '/'
   });
@@ -75,6 +79,21 @@ app.controller('receitasFavoritas', function($scope) {
   $scope.title = 'Receitas Favoritas';
 });
 
+app.controller('menu', function($scope, ListCategorias) {
+  $scope.saudacao = 'Escolha uma categoria';
+
+  $scope.categorias = {};
+
+  ListCategorias.getCategorias(function(data) {
+    $scope.categorias = data;
+  });
+});
+
+app.controller('user', function($scope) {
+  $scope.title = 'Usuário';
+  $scope.saudacao = 'Seu perfil';
+});
+
 // adiciono uns parâmetros de rota através do $routeParams
 // adiciono um filtro.
 app.controller('receita', function($scope, $filter, $routeParams, ReceitaInterna) {
@@ -89,10 +108,6 @@ app.controller('receita', function($scope, $filter, $routeParams, ReceitaInterna
       id: $routeParams.id
     })[0];
   });
-});
-
-app.controller('user', function($scope) {
-  $scope.title = 'Usuário';
 });
 
 // abaixo eu injeto o factory ListReceitas no meu controller
@@ -165,6 +180,33 @@ app.factory('ReceitaInterna', function ($http) {
   return obj;
 });
 
+app.factory('ListCategorias', function ($http) {
+
+  var listaDeCategorias;
+  var obj = {};
+
+  obj = {
+    getCategorias: function(callback){
+      if(listaDeCategorias) {
+        callback(listaDeCategorias);
+        return false;
+      } else {
+          $http({
+            method: 'GET',
+            url: 'data/categorias.json'
+          }).success(function(data) {
+            obj.saveCategorias(data);
+            callback(data);
+          });
+      }
+    },
+    saveCategorias: function(data){
+      listaDeCategorias = data;
+    }
+  }
+
+  return obj;
+});
 
 // O factory `listReceitas` verifica se as receitas existem, se não existir ele faz uma requisição para a url informada e guarda os dados com o `saveReceitas` para evitar fazer mais requisições.
 

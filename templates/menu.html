@@ -1,0 +1,23 @@
+<header class="action-bar">
+  <a href="#/receitas/" class="app-icon action">
+    <i class="icon-up-button"></i>
+    <i class="icon-fries"></i>
+  </a>
+
+  <h1 class="title">{{title}}</h1>
+</header>
+
+<section class="content-receitas">
+  <h3 class="saudacao">{{saudacao}}</h3>
+
+  <form action="javascript:;">
+    <input type="search" placeholder="Procure por uma categoria digitando" class="input-text input-search search">
+  </form>
+
+  <ul class="list inset">
+    <li class="list-item-single-line" ng-repeat="categoria in categorias">
+      {{categoria.titulo}}
+    </li>
+  </ul>
+
+</section>
