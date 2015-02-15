@@ -10,6 +10,13 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
+form { margin-top: 60px; }
+
+.link {
+  display: block;
+  text-align: center;
+}
+
 /* Animações para as transições de tela */
 @-webkit-keyframes slidein {
   from {
@@ -34,6 +41,22 @@ body {
   text-align: center;
   margin-bottom: 30px;
   display: inline-block;
+  cursor: pointer;
+}
+
+.img-user {
+  overflow: hidden;
+  width: 125px;
+  height: 125px;
+  border-radius: 100%;
+  margin: 60px auto 20px auto;
+  position: relative;
+  text-align: center;
+}
+
+.center {
+  margin-top: 40px;
+  text-align: center;
 }
 /*====*/
 
@@ -50,6 +73,8 @@ body {
   color: #fff;
   top: 0;
   left: 0;
+  font-weight: 200px;
+  font-size: 18px;
 
   max-width: 310px;
   display: inline-block;
@@ -86,7 +111,7 @@ body {
 
 .receita-interna figure {
   width: 100%;
-  height: 345px;
+  height: auto;
   overflow: hidden;
   margin-bottom: 20px;
 }
@@ -122,5 +147,24 @@ footer {
   text-align: center;
   margin-top: 20px;
 }
+/*====*/
 
+/* Splash */
+.content-splash {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -117px;
+  margin-top: -63px;
+}
+
+.buttons-primary {
+  width: 235px;
+  position: relative;
+  text-align: center;
+}
+
+.buttons-primary .btn {
+  width: 100%;
+}
 /*====*/
