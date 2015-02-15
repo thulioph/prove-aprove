@@ -45,17 +45,17 @@ app.controller('forgotPass', function($scope) {
 
 // adiciono uns parâmetros de rota através do $routeParams
 // adiciono um filtro.
-app.controller('receita', function($scope, $filter, $routeParams, ListReceitas) {
+app.controller('receita', function($scope, $filter, $routeParams, ReceitaInterna) {
   $scope.title = 'Receita Interna';
+  $scope.saudacao = 'Que tal fazer esta receita?';
 
   var meuFiltro = $filter;
 
-  // chamando o método ListReceitas
-  ListReceitas.getReceitas(function(data) {
+  // chamando o método ReceitaInterna
+  ReceitaInterna.getReceitasInterna(function(data) {
     $scope.receita = meuFiltro('filter')(data, {
       id: $routeParams.id
     })[0];
-    debugger;
   });
 
 });
@@ -82,7 +82,6 @@ app.controller('receitas', function($scope, ListReceitas) {
 app.factory('ListReceitas', function ($http) {
 
   var listaDeReceitas;
-
   var obj = {};
 
   obj = {
@@ -102,6 +101,34 @@ app.factory('ListReceitas', function ($http) {
     },
     saveReceitas: function(data){
       listaDeReceitas = data;
+    }
+  }
+
+  return obj;
+});
+
+app.factory('ReceitaInterna', function ($http) {
+
+  var listaReceitasInterna;
+  var obj = {};
+
+  obj = {
+    getReceitasInterna: function(callback) {
+      if (listaReceitasInterna) {
+        callback(listaReceitasInterna);
+        return false;
+      } else {
+        $http({
+          method: 'GET',
+          url: 'data/receitas-interna.json'
+        }).success(function(data) {
+          obj.saveReceitasInterna(data);
+          callback(data);
+        });
+      }
+    },
+    saveReceitasInterna: function(data) {
+      listaReceitasInterna = data;
     }
   }
 
