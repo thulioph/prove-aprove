@@ -6,3 +6,36 @@
 
   <h1 class="title">{{title}}</h1>
 </header>
+
+<form action="javascript:;" class="form-flex inset">
+  <label for="" class="block-label">Nome da Receita</label>
+  <input type="text" placeholder="Ex.: Meu super bolo de rolo" class="input-text">
+
+  <label for="" class="block-label">Modo de preparo</label>
+  <input type="text" placeholder="Ex.: Junte tudo e bata na panela" class="input-text">
+
+  <label for="" class="block-label">Ingredientes:</label>
+  <div class="flex-group">
+    <input type="email" name="first-name" placeholder="Ex.: Ovos" class="input-text flex1">
+    <input type="email" name="last-name" placeholder="Ex.: Leite" class="input-text flex1">
+  </div>
+
+  <div class="flex-group">
+    <input type="email" name="last-name" placeholder="Ex.: Manteiga" class="input-text flex1">
+    <input type="email" name="last-name" placeholder="Ex.: Sal" class="input-text flex1">
+  </div>
+
+  <div class="flex-group">
+    <input type="email" name="last-name" placeholder="Ex.: dois copos d'agua" class="input-text flex1">
+    <input type="email" name="last-name" placeholder="Ex.: Pimenta" class="input-text flex1">
+  </div>
+
+  <label for="" class="block-label">Categoria</label>
+  <input type="text" placeholder="Ex.: Bolos e Doces" class="input-text">
+
+  <div class="form-actions">
+    <a onClick="dialog();" if="show-dialog" class="btn btn-block">
+      Adicionar Receita
+    </a>
+  </div>
+</form>
