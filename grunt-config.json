@@ -50,20 +50,15 @@
     "dist": {
       "files": {
         "dist/js/scripts.min.js": [
-          "src/js/APP.js"
-          ,"src/js/APP.Status.js"
-          ,"src/js/APP.OffCanvas.js"
-          ,"src/js/APP.General.js"
-          ,"src/js/APP.Request.js"
-          ,"src/js/APP.Request.Receitas.js"
-          ,"src/js/APP.Request.Receitas.Interna.js"
-          ,"src/js/APP.Request.Receitas.Usuario.js"
+          "src/js/app.js"
+          ,"src/js/events.js"
         ],
 
         "dist/js/libs.min.js": [
-          "bower_components/jquery/dist/jquery.min.js"
+          "bower_components/angular/angular.min.js"
+          ,"bower_components/angular-route/angular-route.min.js"
           ,"bower_components/fastclick/lib/fastclick.js"
-          ,"bower_components/hammerjs/hammer.min.js"
+          ,"bower_components/fries/dist/fries.js"
         ]
       }
     }
