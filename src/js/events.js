@@ -27,7 +27,7 @@ function createAccount() {
 
 function redirect(destino, atual) {
   var page = atual + '/';
-  var href = window.location.href = 'http://localhost:8888/unibratec-pos/projeto-final/prove-aprove/#/'+ destino +'/';
+  var href = window.location.href + destino +'/';
 
-  href.replace(page);
+  href.replace(page, '');
 }
