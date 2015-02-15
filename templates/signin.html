@@ -1,7 +1,22 @@
 <header class="action-bar">
-  <a href="#" class="app-icon action">
+  <a href="#/" class="app-icon action up" data-transition="pop">
+    <i class="icon-up-button"></i>
     <i class="icon-fries"></i>
   </a>
 
   <h1 class="title">{{title}}</h1>
 </header>
+
+<form action="javascript:;" class="inset">
+  <label for="" class="block-label">Email</label>
+  <input type="email" name="email" placeholder="Email" class="input-text">
+
+  <label for="" class="block-label">Senha</label>
+  <input type="password" name="password" placeholder="Senha" class="input-text">
+
+  <div class="form-actions">
+    <a href="#/receitas/" class="btn btn-block" title="Esqueci minha senha">Entrar</a>
+  </div>
+</form>
+
+<a href="#/forgot-pass/" class="link" title="Esqueci minha senha">Esqueci minha senha</a>

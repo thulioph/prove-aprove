@@ -1,7 +1,26 @@
 <header class="action-bar">
-  <a href="#" class="app-icon action">
+  <a href="#/" class="app-icon action up" data-transition="pop">
+    <i class="icon-up-button"></i>
     <i class="icon-fries"></i>
   </a>
 
   <h1 class="title">{{title}}</h1>
 </header>
+
+<form action="javascript:;" class="form-flex inset">
+  <label for="" class="block-label">Nome Completo</label>
+  <div class="flex-group">
+    <input type="email" name="first-name" placeholder="Nome" class="input-text flex1">
+    <input type="email" name="last-name" placeholder="Sobrenome" class="input-text flex1">
+  </div>
+
+  <label for="" class="block-label">Email</label>
+  <input type="email" name="email" placeholder="Email" class="input-text">
+
+  <label for="" class="block-label">Senha</label>
+  <input type="password" name="password" placeholder="Senha" class="input-text">
+
+  <div class="form-actions">
+    <input type="submit" class="btn btn-block" value="Entrar">
+  </div>
+</form>
