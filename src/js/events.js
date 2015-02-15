@@ -28,6 +28,7 @@ function createAccount() {
 function redirect(destino, atual) {
   var page = atual + '/';
   var href = window.location.href + destino +'/';
+  var novaUrl = href.replace(page, '');
 
-  href.replace(page, '');
+  window.location.href = novaUrl;
 }
