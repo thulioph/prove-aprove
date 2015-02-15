@@ -25,6 +25,22 @@ var app = angular.module('proveAprove', ['ngRoute']).config(function($routeProvi
     templateUrl: 'templates/user.html',
     controller: 'user'
   })
+  .when('/user/adicionar-receita', {
+    templateUrl: 'templates/adicionar-receita.html',
+    controller: 'adicionarReceita'
+  })
+  .when('/user/minhas-receitas', {
+    templateUrl: 'templates/minhas-receitas.html',
+    controller: 'minhasReceitas'
+  })
+  .when('/user/receitas-favoritas', {
+    templateUrl: 'templates/receitas-favoritas.html',
+    controller: 'receitasFavoritas'
+  })
+  .when('/', {
+    templateUrl: 'templates/splash.html',
+    controller: 'splash'
+  })
   .otherwise({
     redirectTo: '/'
   });
@@ -39,8 +55,24 @@ app.controller('signup', function($scope) {
   $scope.title = 'Signup';
 });
 
+app.controller('splash', function($scope) {
+  console.log('Splash Screen');
+});
+
 app.controller('forgotPass', function($scope) {
   $scope.title = 'Esqueceu a senha';
+});
+
+app.controller('adicionarReceita', function($scope) {
+  $scope.title = 'Adicionar Receita';
+});
+
+app.controller('minhasReceitas', function($scope) {
+  $scope.title = 'Minhas Receitas';
+});
+
+app.controller('receitasFavoritas', function($scope) {
+  $scope.title = 'Receitas Favoritas';
 });
 
 // adiciono uns parâmetros de rota através do $routeParams
@@ -57,7 +89,6 @@ app.controller('receita', function($scope, $filter, $routeParams, ReceitaInterna
       id: $routeParams.id
     })[0];
   });
-
 });
 
 app.controller('user', function($scope) {
@@ -66,7 +97,6 @@ app.controller('user', function($scope) {
 
 // abaixo eu injeto o factory ListReceitas no meu controller
 app.controller('receitas', function($scope, ListReceitas) {
-  $scope.title = 'Receitas';
   $scope.saudacao = 'Qual receita você deseja fazer?';
 
   $scope.receitas = {};
